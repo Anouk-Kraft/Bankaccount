@@ -1,0 +1,238 @@
+{
+	"id": "fbfbc16d-0564-4ee8-8887-564f3bfdd7d1",
+	"name": "Bankaccount",
+	"timestamp": "2022-05-22T16:08:11.868Z",
+	"collection_id": "1431d9bd-f728-450e-90fb-49415a278d35",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "505511e0-2008-49a0-91c0-35f9d641bdfe",
+			"name": "All Kontos",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/list",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				46
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "12c1076f-7d89-41e8-a5c8-8bbbf517c5b7",
+			"name": "All Transactions",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/list",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "56b6872b-897a-4f08-b011-6e568c4a3a08",
+			"name": "All Settings",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/list",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7e142b00-95d6-4360-a639-5a53b3f88e56",
+			"name": "Wrong URL",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfer/list",
+			"time": 18,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				18
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "16fdba2e-e77c-44c4-a9f8-8c89ba9a4ee3",
+			"name": "Tranfers by Id",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/read?id=420",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7e93f508-6e9f-40da-8f23-22872c360288",
+			"name": "Settings by Id",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/read?id=6554",
+			"time": 56,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				56
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "25bde3be-32c2-4e28-bf42-9181737ea76d",
+			"name": "Konto by Id",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/read?id=422",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ddb4cb17-73af-49fb-9099-6e9d8ccae973",
+			"name": "TransferId out of Range",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/read?id=430",
+			"time": 22,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				22
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "30f93226-8078-4f4a-b169-3b9ca02d7b15",
+			"name": "SettingsId out of Range",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/read?id=5554",
+			"time": 13,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d50e6054-d851-4326-b890-95d8c4e43489",
+			"name": "KontoId out of Range",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/read?id=435",
+			"time": 5,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 198,
+	"collection": {
+		"requests": [
+			{
+				"id": "505511e0-2008-49a0-91c0-35f9d641bdfe",
+				"method": "GET"
+			},
+			{
+				"id": "12c1076f-7d89-41e8-a5c8-8bbbf517c5b7",
+				"method": "GET"
+			},
+			{
+				"id": "56b6872b-897a-4f08-b011-6e568c4a3a08",
+				"method": "GET"
+			},
+			{
+				"id": "7e142b00-95d6-4360-a639-5a53b3f88e56",
+				"method": "GET"
+			},
+			{
+				"id": "16fdba2e-e77c-44c4-a9f8-8c89ba9a4ee3",
+				"method": "GET"
+			},
+			{
+				"id": "7e93f508-6e9f-40da-8f23-22872c360288",
+				"method": "GET"
+			},
+			{
+				"id": "25bde3be-32c2-4e28-bf42-9181737ea76d",
+				"method": "GET"
+			},
+			{
+				"id": "ddb4cb17-73af-49fb-9099-6e9d8ccae973",
+				"method": "GET"
+			},
+			{
+				"id": "30f93226-8078-4f4a-b169-3b9ca02d7b15",
+				"method": "GET"
+			},
+			{
+				"id": "d50e6054-d851-4326-b890-95d8c4e43489",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,61 @@
+[
+{
+  "name": "Alfred",
+  "nachname": "Alger",
+  "iBan": "CH93007620116238529546",
+  "transferBetrag": 50.00,
+  "transferNumber": 420
+
+},
+  {
+  "name": "Fabio",
+  "nachname": "Aescher",
+  "iBan": "CH63007620179878877998",
+  "transferBetrag": 550.00,
+  "transferNumber": 400
+},
+    {
+  "name": "Danny",
+  "nachname": "Tumbler",
+  "iBan": "CH82007620187897829546",
+  "transferBetrag": 69.00,
+  "transferNumber": 460
+},
+    {
+  "name": "Anna",
+  "nachname": "Belargi",
+  "iBan": "CH76007620116290898778",
+  "transferBetrag": 50.00,
+  "transferNumber": 23
+},
+    {
+  "name": "Mike",
+  "nachname": "Höner",
+  "iBan": "CH89607620116900087654",
+  "transferBetrag": 650.00,
+  "transferNumber": 420
+},
+    {
+  "name": "Eavnto",
+  "nachname": "Dumbto",
+  "iBan": "CH93007600003342356567",
+  "transferBetrag": 320.00,
+  "transferNumber": 421
+},
+    {
+  "name": "Elizabeth",
+  "nachname": "Rhein",
+  "iBan": "DE88007097897878529546",
+  "transferBetrag": 50.00,
+  "transferNumber": 20
+},
+    {
+  "name": "Ron",
+  "nachname": "Bielecki",
+  "iBan": "DE89687236438658376777",
+  "transferBetrag": 999.00,
+  "transferNumber": 419
+}
+
+  
+]
