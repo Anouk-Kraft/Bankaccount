@@ -35,7 +35,7 @@ public class SettingsService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response readBooks(@QueryParam("id") int settingsId) {
+    public Response readSettings(@QueryParam("id") int settingsId) {
         int httpStatus = 200;
         Settings settings = DataHandler.getInstance().readSettingsBySettingId(settingsId);
         if (settings == null) {

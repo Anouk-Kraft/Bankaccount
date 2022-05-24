@@ -37,7 +37,7 @@ public class TransferBillService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response readBooks(@QueryParam("id") int transfers) {
+    public Response readTransfers(@QueryParam("id") int transfers) {
         int httpStatus = 200;
         TransferBill transferBill = DataHandler.getInstance().readTransfersBytransferNumber(transfers);
         if (transferBill == null) {

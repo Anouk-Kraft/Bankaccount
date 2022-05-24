@@ -37,7 +37,7 @@ public class KontoService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response readBooks(@QueryParam("id") int kontoNumber) {
+    public Response readKonto(@QueryParam("id") int kontoNumber) {
         int httpStatus = 200;
         Konto konto = DataHandler.getInstance().readKontoByKontoNumber(kontoNumber);
         if (konto == null) {
