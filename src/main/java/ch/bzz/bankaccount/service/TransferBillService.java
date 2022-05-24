@@ -27,7 +27,7 @@ public class TransferBillService {
     @Produces(MediaType.APPLICATION_JSON)
 
     public Response listTransferBills() {
-        List<TransferBill> transferBillList = DataHandler.getInstance().readAllTransfers();
+        List<TransferBill> transferBillList = DataHandler.readAllTransfers();
         return Response
                 .status(200)
                 .entity(transferBillList)
@@ -39,7 +39,7 @@ public class TransferBillService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readTransfers(@QueryParam("id") int transfers) {
         int httpStatus = 200;
-        TransferBill transferBill = DataHandler.getInstance().readTransfersBytransferNumber(transfers);
+        TransferBill transferBill = DataHandler.readTransfersBytransferNumber(transfers);
         if (transferBill == null) {
             httpStatus = 410;
         }

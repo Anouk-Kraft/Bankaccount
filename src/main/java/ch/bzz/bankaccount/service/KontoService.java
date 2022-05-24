@@ -27,7 +27,7 @@ public class KontoService {
         @Produces(MediaType.APPLICATION_JSON)
 
         public Response kontoList() {
-            List<Konto> kontoList = DataHandler.getInstance().readAllKontos();
+            List<Konto> kontoList = DataHandler.readAllKontos();
             return Response
                     .status(200)
                     .entity(kontoList)
@@ -39,7 +39,7 @@ public class KontoService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readKonto(@QueryParam("id") int kontoNumber) {
         int httpStatus = 200;
-        Konto konto = DataHandler.getInstance().readKontoByKontoNumber(kontoNumber);
+        Konto konto = DataHandler.readKontoByKontoNumber(kontoNumber);
         if (konto == null) {
             httpStatus = 410;
         }

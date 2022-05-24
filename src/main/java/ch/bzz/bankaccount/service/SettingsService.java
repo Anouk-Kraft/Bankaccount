@@ -25,7 +25,7 @@ public class SettingsService {
     @Produces(MediaType.APPLICATION_JSON)
 
     public Response settingsList() {
-        List<Settings> settingsList = DataHandler.getInstance().readAllSettings();
+        List<Settings> settingsList = DataHandler.readAllSettings();
         return Response
                 .status(200)
                 .entity(settingsList)
@@ -37,7 +37,7 @@ public class SettingsService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readSettings(@QueryParam("id") int settingsId) {
         int httpStatus = 200;
-        Settings settings = DataHandler.getInstance().readSettingsBySettingId(settingsId);
+        Settings settings = DataHandler.readSettingsBySettingId(settingsId);
         if (settings == null) {
             httpStatus = 410;
         }

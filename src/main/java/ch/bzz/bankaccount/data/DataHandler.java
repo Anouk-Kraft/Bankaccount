@@ -18,41 +18,24 @@ import java.util.List;
  * reads and writes the data in the JSON-files
  */
 public class DataHandler {
-    private static DataHandler instance = null;
-    private List<Konto> kontoList;
-    private List<TransferBill> transferBillList;
-    private List<Settings> settingsList;
+    private static List<Konto> kontoList;
+    private static List<TransferBill> transferBillList;
+    private static List<Settings> settingsList;
 
     /**
      * private constructor defeats instantiation
      */
     private DataHandler() {
-        setTransferBillList(new ArrayList<>());
-        readTransferBillJSON();
-        setKontoList(new ArrayList<>());
-        readKontoJSON();
-        setSettings(new ArrayList<>());
-        readSettingsJSON();
+
     }
 
-
-
-    /**
-     * gets the only instance of this class
-     * @return
-     */
-    public static DataHandler getInstance() {
-        if (instance == null)
-            instance = new DataHandler();
-        return instance;
-    }
 
 
     /**
      * reads all Kontos
      * @return list of kontos
      */
-    public List<Konto> readAllKontos() {
+    public static List<Konto> readAllKontos() {
         return getKontoList();
     }
 
@@ -62,7 +45,7 @@ public class DataHandler {
      * @return the Konto (null=not found)
      */
 
-    public Konto readKontoByKontoNumber(int kontoNumber) {
+    public static Konto readKontoByKontoNumber(int kontoNumber) {
         Konto konto = null;
         for (Konto entry : getKontoList()) {
             if (entry.getKontoNumber() == (kontoNumber)) {
@@ -77,7 +60,7 @@ public class DataHandler {
      * @return list of transfers
      */
 
-    public List<TransferBill> readAllTransfers() {
+    public static List<TransferBill> readAllTransfers() {
 
         return getTransferBillList();
     }
@@ -88,7 +71,7 @@ public class DataHandler {
      * @return the Transfers (null=not found)
      */
 
-    public TransferBill readTransfersBytransferNumber(int transferNumber) {
+    public static TransferBill readTransfersBytransferNumber(int transferNumber) {
         TransferBill transferBill = null;
         for (TransferBill entry : getTransferBillList()) {
             if (entry.getTransferNumber() == (transferNumber)) {
@@ -103,7 +86,7 @@ public class DataHandler {
      * @return list of settings
      */
 
-    public List<Settings> readAllSettings() {
+    public static List<Settings> readAllSettings() {
 
         return getSettingsList();
     }
@@ -114,7 +97,7 @@ public class DataHandler {
      * @return the Settings (null=not found)
      */
 
-    public Settings readSettingsBySettingId(int settingsId) {
+    public static Settings readSettingsBySettingId(int settingsId) {
         Settings settings = null;
         for (Settings entry : getSettingsList()) {
             if (entry.getSettingsId() == (settingsId)) {
@@ -127,7 +110,7 @@ public class DataHandler {
     /**
      * reads the Konto from the JSON-file
      */
-    private void readKontoJSON() {
+    private static void readKontoJSON() {
         try {
             String path = Config.getProperty("bankAccountJSON");
             byte[] jsonData = Files.readAllBytes(
@@ -146,7 +129,7 @@ public class DataHandler {
     /**
      * reads the Transfers from the JSON-file
      */
-    private void readTransferBillJSON() {
+    private static void readTransferBillJSON() {
         try {
             byte[] jsonData = Files.readAllBytes(
                     Paths.get(
@@ -165,7 +148,7 @@ public class DataHandler {
     /**
      * reads the Settings from the JSON-file
      */
-    private void readSettingsJSON() {
+    private static void readSettingsJSON() {
         try {
             byte[] jsonData = Files.readAllBytes(
                     Paths.get(
@@ -189,7 +172,12 @@ public class DataHandler {
      *
      * @return value of kontolist
      */
-    private List<Konto> getKontoList() {
+    private static List<Konto> getKontoList() {
+        if (kontoList==null) {
+            setKontoList(new ArrayList<>());
+            readKontoJSON();
+        }
+
         return kontoList;
     }
 
@@ -198,8 +186,8 @@ public class DataHandler {
      *
      * @param kontoList the value to set
      */
-    private void setKontoList(List<Konto> kontoList) {
-        this.kontoList = kontoList;
+    private static void setKontoList(List<Konto> kontoList) {
+        DataHandler.kontoList = kontoList;
     }
 
     /**
@@ -207,7 +195,11 @@ public class DataHandler {
      *
      * @return value of transferList
      */
-    private List<TransferBill> getTransferBillList() {
+    private static List<TransferBill> getTransferBillList() {
+        if (transferBillList==null) {
+            setTransferBillList(new ArrayList<>());
+            readTransferBillJSON();
+        }
         return transferBillList;
     }
 
@@ -216,8 +208,8 @@ public class DataHandler {
      *
      * @param transferBillList the value to set
      */
-    private void setTransferBillList(List<TransferBill> transferBillList) {
-        this.transferBillList = transferBillList;
+    private static void setTransferBillList(List<TransferBill> transferBillList) {
+        DataHandler.transferBillList = transferBillList;
     }
 
 
@@ -226,7 +218,11 @@ public class DataHandler {
      *
      * @return value of settingsList
      */
-    private List<Settings> getSettingsList() {
+    private static List<Settings> getSettingsList() {
+        if (settingsList==null) {
+            setSettings(new ArrayList<>());
+            readSettingsJSON();
+        }
         return settingsList;
     }
 
@@ -235,8 +231,8 @@ public class DataHandler {
      *
      * @param settingsList the value to set
      */
-    private void setSettings(List<Settings> settingsList) {
-        this.settingsList = settingsList;
+    private static void setSettings(List<Settings> settingsList) {
+        DataHandler.settingsList = settingsList;
     }
 
 
