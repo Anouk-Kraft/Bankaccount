@@ -1,7 +1,6 @@
 package ch.bzz.bankaccount.service;
 
 import ch.bzz.bankaccount.data.DataHandler;
-import ch.bzz.bankaccount.model.Konto;
 import ch.bzz.bankaccount.model.Settings;
 
 import javax.ws.rs.GET;
