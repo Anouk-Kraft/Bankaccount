@@ -2,6 +2,10 @@ package ch.bzz.bankaccount.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
+
 /*
 This class is for the Settings from my Bankaccount
  */
@@ -9,10 +13,24 @@ public class Settings {
 
     @JsonIgnore
     Konto konto;
+
+    @FormParam("name")
+    @Size(min=3, max=30)
     private String name;
+
+    @FormParam("nachname")
+    @Size(min=3, max=30)
     private String nachname;
+
+    @FormParam("iBan")
+    @Pattern(regexp = "[A-Za-z1-9.]{1,40}@[A-Za-z.]{1,20}")
     private String eMail;
+
+    @FormParam("settingsId")
+    @Size(min=1, max=4)
     private int settingsId;
+
+    @FormParam("showAmount")
     private boolean showAmount;
 
     /**

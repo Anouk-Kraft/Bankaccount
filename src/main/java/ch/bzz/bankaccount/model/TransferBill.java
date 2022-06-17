@@ -2,17 +2,39 @@ package ch.bzz.bankaccount.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
+import java.math.BigDecimal;
+
 /*
 This class is if you want to do any transactions with your money
  */
 
 public class TransferBill {
 
-    private String name;
-    private String nachname;
-    private String iBan;
-    private double transferBetrag;
+    @FormParam("")
+    @Size(min=1, max=10000)
     private int transferNumber;
+
+    @FormParam("name")
+    @Size(min=3, max=30)
+    private String name;
+
+    @FormParam("nachname")
+    @Size(min=3, max=30)
+    private String nachname;
+
+    @FormParam("iBan")
+    @Pattern(regexp = "[a-zA-Z]{2}[0-9]{18,22}")
+    private String iBan;
+
+    @FormParam("transferBetrag")
+    @DecimalMin(value ="0.05")
+    @DecimalMax(value = "1000000.00")
+    private BigDecimal transferBetrag;
     @JsonIgnore
     Konto konto;
 
@@ -75,7 +97,7 @@ public class TransferBill {
      *
      * @return value of transferBetrag
      */
-    public double getTransferBetrag() {
+    public BigDecimal getTransferBetrag() {
         return transferBetrag;
     }
 
@@ -84,7 +106,7 @@ public class TransferBill {
      *
      * @param transferBetrag the value to set
      */
-    public void setTransferBetrag(double transferBetrag) {
+    public void setTransferBetrag(BigDecimal transferBetrag) {
         this.transferBetrag = transferBetrag;
     }
 

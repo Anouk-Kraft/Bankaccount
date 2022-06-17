@@ -1,15 +1,15 @@
 package ch.bzz.bankaccount.service;
 
 import ch.bzz.bankaccount.data.DataHandler;
-import ch.bzz.bankaccount.model.Konto;
 import ch.bzz.bankaccount.model.TransferBill;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -37,15 +37,95 @@ public class TransferBillService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response readTransfers(@QueryParam("id") int transfers) {
+    public Response readTransfers(
+            @NotEmpty
+            @Pattern(regexp = "[0-9]{1,5}")
+            @QueryParam("transferNumber") int transferNumber) {
         int httpStatus = 200;
-        TransferBill transferBill = DataHandler.getInstance().readTransfersBytransferNumber(transfers);
+        TransferBill transferBill = DataHandler.readTransfersBytransferNumber(transferNumber);
         if (transferBill == null) {
             httpStatus = 410;
         }
         return Response
                 .status(httpStatus)
                 .entity(transferBill)
+                .build();
+    }
+    /**
+     * inserts a new Transfer
+     * @param transferNumber the number of the transfer
+     * @return Response
+     */
+    @POST
+    @Path("create")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response insertTransfer(
+            @Valid @BeanParam TransferBill transferBill,
+            @NotEmpty
+            @Pattern(regexp = "[0-9]{1,4}")
+            @FormParam("transferNumber") int transferNumber
+    ) {
+        transferBill.setTransferNumber((int) Math.floor(Math.random()*101));
+        DataHandler.insertTransfer(transferBill);
+        return Response
+                .status(200)
+                .entity("")
+                .build();
+    }
+
+    /**
+     * updates a new Transfer
+     * @param transferNumber the number of the transfer
+     * @return Response
+     */
+    @PUT
+    @Path("update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response updatePublisher(
+            @Valid @BeanParam TransferBill transferBill,
+            @NotEmpty
+            @Pattern(regexp = "[0-9]{1,4}")
+            @FormParam("transferNumber") int transferNumber
+    ) {
+        int httpStatus = 200;
+        TransferBill oldTransfer = DataHandler.readTransfersBytransferNumber(transferBill.getTransferNumber());
+        if (oldTransfer != null) {
+                    oldTransfer.setTransferNumber(transferBill.getTransferNumber());
+                    oldTransfer.setName(transferBill.getName());
+                    oldTransfer.setNachname(transferBill.getNachname());
+                    oldTransfer.setiBan(transferBill.getiBan());
+                    oldTransfer.setTransferBetrag(transferBill.getTransferBetrag());
+
+            DataHandler.updateTransfer();
+        } else {
+            httpStatus = 410;
+        }
+        return Response
+                .status(httpStatus)
+                .entity("")
+                .build();
+    }
+
+    /**
+     * deletes a transfer identified by its number
+     * @param transferNumber  the key
+     * @return  Response
+     */
+    @DELETE
+    @Path("delete")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response deletePublisher(
+            @NotEmpty
+            @Pattern(regexp = "[0-9]{1,4}")
+            @QueryParam("transferNumber") int transferNumber
+    ) {
+        int httpStatus = 200;
+        if (!DataHandler.deleteTransfer(transferNumber)) {
+            httpStatus = 410;
+        }
+        return Response
+                .status(httpStatus)
+                .entity("")
                 .build();
     }
 }

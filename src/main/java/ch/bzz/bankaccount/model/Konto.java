@@ -1,6 +1,7 @@
 package ch.bzz.bankaccount.model;
 
 
+import ch.bzz.bankaccount.data.DataHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /*
@@ -8,11 +9,12 @@ This class is my main page where you see your account
  */
 public class Konto {
 
+    private int kontoNumber;
     private String name;
     private String nachname;
     private double amount;
     private String iBanNr;
-    private int kontoNumber;
+
 
     @JsonIgnore
     TransferBill transferBill;
@@ -124,4 +126,25 @@ public class Konto {
     public void setTransferBill(TransferBill transferBill) {
         this.transferBill = transferBill;
     }
+    /**
+     * gets the publisherUUID from the Publisher-object
+     * @return
+     */
+    public Integer getTransferNumber() {
+        if (getTransferBill()== null) return null;
+        return getTransferBill().getTransferNumber();
+    }
+
+    /**
+     * creates a Publisher-object without the booklist
+     * @param transferNumber the key
+     */
+    public void setTransferNumber(int transferNumber) {
+        setTransferBill(new TransferBill());
+        TransferBill transferBill = DataHandler.getInstance().readTransfersBytransferNumber(transferNumber);
+        getTransferBill().setTransferNumber(transferNumber);
+        getTransferBill().setTransferNumber(transferBill.getTransferNumber());
+    }
+
 }
+
