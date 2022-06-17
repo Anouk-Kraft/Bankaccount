@@ -40,7 +40,7 @@ public class TransferBillService {
     public Response readTransfers(
             @NotEmpty
             @Pattern(regexp = "[0-9]{1,5}")
-            @QueryParam("transferNumber") int transferNumber) {
+            @QueryParam("transferNumber") String transferNumber) {
         int httpStatus = 200;
         TransferBill transferBill = DataHandler.readTransfersBytransferNumber(transferNumber);
         if (transferBill == null) {
@@ -61,11 +61,11 @@ public class TransferBillService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response insertTransfer(
             @Valid @BeanParam TransferBill transferBill,
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("transferNumber") int transferNumber
+            @FormParam("transferNumber") String transferNumber
     ) {
-        transferBill.setTransferNumber((int) Math.floor(Math.random()*101));
+        transferBill.setTransferNumber(transferNumber);
+
         DataHandler.insertTransfer(transferBill);
         return Response
                 .status(200)
@@ -81,20 +81,19 @@ public class TransferBillService {
     @PUT
     @Path("update")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response updatePublisher(
+    public Response updateTransfer(
             @Valid @BeanParam TransferBill transferBill,
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("transferNumber") int transferNumber
+            @FormParam("transferNumber") String transferNumber
     ) {
         int httpStatus = 200;
         TransferBill oldTransfer = DataHandler.readTransfersBytransferNumber(transferBill.getTransferNumber());
         if (oldTransfer != null) {
-                    oldTransfer.setTransferNumber(transferBill.getTransferNumber());
                     oldTransfer.setName(transferBill.getName());
                     oldTransfer.setNachname(transferBill.getNachname());
                     oldTransfer.setiBan(transferBill.getiBan());
                     oldTransfer.setTransferBetrag(transferBill.getTransferBetrag());
+            oldTransfer.setTransferNumber(transferBill.getTransferNumber());
 
             DataHandler.updateTransfer();
         } else {
@@ -114,10 +113,9 @@ public class TransferBillService {
     @DELETE
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response deletePublisher(
-            @NotEmpty
+    public Response delteTransfer(
             @Pattern(regexp = "[0-9]{1,4}")
-            @QueryParam("transferNumber") int transferNumber
+            @QueryParam("transferNumber") String transferNumber
     ) {
         int httpStatus = 200;
         if (!DataHandler.deleteTransfer(transferNumber)) {

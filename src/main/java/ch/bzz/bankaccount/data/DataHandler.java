@@ -66,10 +66,10 @@ public class DataHandler {
      * @return the Transfers (null=not found)
      */
 
-    public static TransferBill readTransfersBytransferNumber(int transferNumber) {
+    public static TransferBill readTransfersBytransferNumber(String transferNumber) {
         TransferBill transferBill = null;
         for (TransferBill entry : getTransferBillList()) {
-            if (entry.getTransferNumber() == (transferNumber)) {
+            if (entry.getTransferNumber().equals(transferNumber)) {
                 transferBill = entry;
             }
         }
@@ -93,12 +93,15 @@ public class DataHandler {
         writeTransferJSON();
     }
 
+
+
+
     /**
      * deletes a transfer identified by the transferNumber
      * @param transferNumber  the key
      * @return  success=true/false
      */
-    public static boolean deleteTransfer(int transferNumber) {
+    public static boolean deleteTransfer(String transferNumber) {
         TransferBill transferBill = readTransfersBytransferNumber(transferNumber);
         if (transferBill != null) {
             getTransferList().remove(transferBill);
@@ -142,7 +145,7 @@ public class DataHandler {
      * @param settingId  the key
      * @return  success=true/false
      */
-    public static boolean deleteSetting(int settingId) {
+    public static boolean deleteSetting(String settingId) {
         Settings settings = readSettingsBySettingId(settingId);
         if (settings != null) {
             getSettingsList().remove(settings);
@@ -159,16 +162,24 @@ public class DataHandler {
      * @return the Settings (null=not found)
      */
 
-    public static Settings readSettingsBySettingId(int settingsId) {
+    public static Settings readSettingsBySettingId(String settingsId) {
         Settings settings = null;
         for (Settings entry : getSettingsList()) {
-            if (entry.getSettingsId() == (settingsId)) {
+            if (entry.getSettingsId().equals(settingsId)) {
                 settings = entry;
             }
         }
         return settings;
     }
 
+//    /**
+//     * initialize the lists with the data
+//     */
+//    public static void initLists() {
+//        DataHandler.setTransferList(null);
+//        DataHandler.setKontolist(null);
+//        DataHandler.setSettingsList(null);
+//    }
 
     /**
      * reads all Kontos
@@ -184,10 +195,10 @@ public class DataHandler {
      * @return the Konto (null=not found)
      */
 
-    public static Konto readKontoByKontoNumber(int kontoNumber) {
+    public static Konto readKontoByKontoNumber(String kontoNumber) {
         Konto konto = null;
         for (Konto entry : getKontoList()) {
-            if (entry.getKontoNumber() == (kontoNumber)) {
+            if (entry.getKontoNumber().equals(kontoNumber)) {
                 konto = entry;
             }
         }
@@ -216,7 +227,7 @@ public class DataHandler {
      * @param accountId  the key
      * @return  success=true/false
      */
-    public static boolean deleteAccount(int accountId) {
+    public static boolean deleteAccount(String accountId) {
         Konto konto = readKontoByKontoNumber(accountId);
         if (konto != null) {
             getAccountList().remove(konto);

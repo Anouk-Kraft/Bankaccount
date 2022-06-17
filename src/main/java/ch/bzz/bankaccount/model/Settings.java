@@ -28,7 +28,7 @@ public class Settings {
 
     @FormParam("settingsId")
     @Size(min=1, max=4)
-    private int settingsId;
+    private String settingsId;
 
     @FormParam("showAmount")
     private boolean showAmount;
@@ -110,7 +110,7 @@ public class Settings {
      *
      * @return value of settingsId
      */
-    public int getSettingsId() {
+    public String getSettingsId() {
         return settingsId;
     }
 
@@ -119,7 +119,7 @@ public class Settings {
      *
      * @param settingsId the value to set
      */
-    public void setSettingsId(int settingsId) {
+    public void setSettingsId(String settingsId) {
         this.settingsId = settingsId;
     }
 

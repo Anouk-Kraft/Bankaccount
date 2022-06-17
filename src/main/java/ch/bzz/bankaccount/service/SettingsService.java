@@ -46,9 +46,8 @@ public class SettingsService {
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
     public Response readSettings(
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,5}")
-            @QueryParam("id") int settingsId) {
+            @QueryParam("id") String settingsId) {
         int httpStatus = 200;
         Settings settings = DataHandler.readSettingsBySettingId(settingsId);
         if (settings == null) {
@@ -68,14 +67,13 @@ public class SettingsService {
     @POST
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response insertBook(
+    public Response insertSetting(
             @Valid @BeanParam Settings settings,
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("settingsId") int settingsId
+            @FormParam("settingsId") String settingsId
     ) {
 
-        settings.setSettingsId((int) Math.floor(Math.random()*101));
+        settings.setSettingsId(settingsId);
 
         DataHandler.insertSettings(settings);
         return Response
@@ -92,11 +90,10 @@ public class SettingsService {
     @PUT
     @Path("update")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response updateBook(
+    public Response updateSetting(
             @Valid @BeanParam Settings settings,
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("settingsId") int settingsId
+            @FormParam("settingsId") String settingsId
 
     ) {
         int httpStatus = 200;
@@ -119,15 +116,18 @@ public class SettingsService {
     }
 
     /**
-     * deletes a book identified by its uuid
+     * deletes a setting identified by its id
      * @param settingsId  the key
      * @return  Response
      */
     @DELETE
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response deleteBook(
-            @QueryParam("settingsId") int settingsId
+    public Response delteSetting(
+            @Valid @BeanParam Settings settings,
+            @NotEmpty
+            @Pattern(regexp = "[0-9]{1,4}")
+            @FormParam("settingsId") String settingsId
     ) {
         int httpStatus = 200;
         if (!DataHandler.deleteSetting(settingsId)) {
@@ -139,25 +139,5 @@ public class SettingsService {
                 .build();
     }
 
-    /**
-     * sets the attributes for the settings-object
-     * @param settings  the settings-object
-     * @param name  the name of the User
-     * @param nachname  the nachname of the User
-     * @param eMail  the eMail of the User
-     * @param showAmount  if the amount gets shown on your account
-     */
-    private void setAttributes(
-            Settings settings,
-            String name,
-            String nachname,
-            String eMail,
-            boolean showAmount
-    ) {
-        settings.setName(name);
-        settings.setNachname(nachname);
-        settings.seteMail(eMail);
-        settings.setShowAmount(showAmount);
-    }
 
 }

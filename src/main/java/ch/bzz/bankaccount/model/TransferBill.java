@@ -15,9 +15,7 @@ This class is if you want to do any transactions with your money
 
 public class TransferBill {
 
-    @FormParam("")
-    @Size(min=1, max=10000)
-    private int transferNumber;
+
 
     @FormParam("name")
     @Size(min=3, max=30)
@@ -35,8 +33,12 @@ public class TransferBill {
     @DecimalMin(value ="0.05")
     @DecimalMax(value = "1000000.00")
     private BigDecimal transferBetrag;
-    @JsonIgnore
-    Konto konto;
+
+    @FormParam("transferNumber")
+    @Size(min=1, max=10000)
+    private String transferNumber;
+
+
 
     /**
      * gets name
@@ -115,7 +117,7 @@ public class TransferBill {
      *
      * @return value of transferNumber
      */
-    public int getTransferNumber() {
+    public String getTransferNumber() {
         return transferNumber;
     }
 
@@ -124,25 +126,14 @@ public class TransferBill {
      *
      * @param transferNumber the value to set
      */
-    public void setTransferNumber(int transferNumber) {
+    public void setTransferNumber(String transferNumber) {
         this.transferNumber = transferNumber;
     }
 
-    /**
-     * gets konto
-     *
-     * @return value of konto
-     */
-    public Konto getKonto() {
-        return konto;
-    }
 
-    /**
-     * sets konto
-     *
-     * @param konto the value to set
-     */
-    public void setKonto(Konto konto) {
-        this.konto = konto;
-    }
+
+
+
+
+
 }

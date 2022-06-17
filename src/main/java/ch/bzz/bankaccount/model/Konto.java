@@ -4,15 +4,36 @@ package ch.bzz.bankaccount.model;
 import ch.bzz.bankaccount.data.DataHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
+
 /*
 This class is my main page where you see your account
  */
 public class Konto {
 
-    private int kontoNumber;
+    @FormParam("kontoNumber")
+    @Size(min=1, max=10000)
+    private String kontoNumber;
+
+    @FormParam("name")
+    @Size(min=3, max=30)
     private String name;
+
+    @FormParam("nachname")
+    @Size(min=3, max=30)
     private String nachname;
+
+    @FormParam("amount")
+    @DecimalMin(value ="0.05")
+    @DecimalMax(value = "1000000.00")
     private double amount;
+
+    @FormParam("iBanNr")
+    @Pattern(regexp = "[a-zA-Z]{2}[0-9]{18,22}")
     private String iBanNr;
 
 
@@ -96,7 +117,7 @@ public class Konto {
      *
      * @return value of kontoNumber
      */
-    public int getKontoNumber() {
+    public String getKontoNumber() {
         return kontoNumber;
     }
 
@@ -105,7 +126,7 @@ public class Konto {
      *
      * @param kontoNumber the value to set
      */
-    public void setKontoNumber(int kontoNumber) {
+    public void setKontoNumber(String kontoNumber) {
         this.kontoNumber = kontoNumber;
     }
 
@@ -130,7 +151,7 @@ public class Konto {
      * gets the publisherUUID from the Publisher-object
      * @return
      */
-    public Integer getTransferNumber() {
+    public String getTransferNumber() {
         if (getTransferBill()== null) return null;
         return getTransferBill().getTransferNumber();
     }
@@ -139,7 +160,7 @@ public class Konto {
      * creates a Publisher-object without the booklist
      * @param transferNumber the key
      */
-    public void setTransferNumber(int transferNumber) {
+    public void setTransferNumber(String transferNumber) {
         setTransferBill(new TransferBill());
         TransferBill transferBill = DataHandler.getInstance().readTransfersBytransferNumber(transferNumber);
         getTransferBill().setTransferNumber(transferNumber);
