@@ -1,0 +1,1624 @@
+{
+	"id": "f218764e-4d28-456d-9d06-b256cf61c4aa",
+	"name": "test",
+	"timestamp": "2022-06-20T18:43:47.698Z",
+	"collection_id": "b7fdfb44-319a-41e6-9335-1115d3a23f09",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "be504313-5b7b-4248-86cb-69f396e68b16",
+			"name": "createTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 93,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				93
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a33c1e8a-a2a8-4928-aa21-8910f0f8eb8b",
+			"name": "createTransferWrongName",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 72,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				72
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4bdba257-3ed4-4367-9caf-f985a19e0431",
+			"name": "createTransfernameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 128,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				128
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "10d06ed8-d6e8-460b-9daf-a5d0eae37ff3",
+			"name": "createTransferWrongNachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 20,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c74557e8-68a1-4c27-ac4b-43036230edee",
+			"name": "createTransfernachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 15,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6a5935fb-5b08-4a6b-ae54-e48094f8e0a5",
+			"name": "createTransferWrongiBan",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4962a6f1-f31b-49fa-94c1-424d8cc0f83a",
+			"name": "createTransferiBanNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 17,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				17
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "775df7e9-8e70-4631-8226-7547d91a73f2",
+			"name": "createTransferWrongAmount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 14,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7f05ba95-3b42-4f7e-b1fd-8b06701bb6d2",
+			"name": "createTransfertransferBetragNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7b73425c-034c-496c-ae01-5ceee983b18a",
+			"name": "createTransferWrongTransferNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 9,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "772040a1-aca0-4093-9a05-3ea15071e911",
+			"name": "createTransfertransferNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 22,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				22
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f2e2c310-e6f9-4514-9dba-0330dbc106bc",
+			"name": "updateTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/update",
+			"time": 95,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				95
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "53ba6a7f-598e-4854-9285-772bdf8a29b3",
+			"name": "upadteTransferWrongName",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 15,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				15
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1ca8ef4c-c486-45c1-87e2-eedb96ffe2b1",
+			"name": "upadteTransfernameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 8,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d7c2b441-8acc-48b6-aa2e-7093288904c6",
+			"name": "upadteTransferWrongNachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6e55419a-d3c5-4234-a3c1-ee84de78d356",
+			"name": "upadteTransfernachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 7,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "589468a7-c3f5-444f-83bf-880701d5820a",
+			"name": "upadteTransferWrongiBan",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 7,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b4264de6-2aeb-46d0-8ea6-75177c75d07f",
+			"name": "upadteTransferiBanNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "073bc22c-c9fa-48a1-8cd0-21197639fbd5",
+			"name": "upadteTransferWrongAmount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 6,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "53ae3b63-b9ac-40e5-90cd-97e9579512e3",
+			"name": "upadteTransfertransferBetragNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8f86081f-771a-4ff8-a9bc-ebcd20e43c96",
+			"name": "upadteTransferWrongTransferNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 3,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "830bf039-8da4-4cb5-b71b-a87f4779c70c",
+			"name": "upadteTransfertransferNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 12,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1258087f-5201-465e-bc51-f65e36ecf309",
+			"name": "deleteTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				20
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "39b34d30-599a-484e-a0ce-eea17b63a026",
+			"name": "deleteTransferWrongtransferNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
+			"time": 10,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c7cd3b8a-0ace-471c-863a-4ab8d085d28e",
+			"name": "deleteTransfertransferNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
+			"time": 5,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d5bf26cc-1503-4f6f-b869-ed5cf7c10a4e",
+			"name": "createSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 24,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				24
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "94198d7a-fd68-4acc-bed1-77bd4cae82af",
+			"name": "createSettingWrongName",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 33,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				33
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6afccd43-7103-4bfd-b3a0-4d8d7f7ed10d",
+			"name": "createSettingnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 9,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8202d08f-c787-4512-98bc-51e024ff6761",
+			"name": "createSettingWrongnachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8f0f57eb-c2ec-4f96-aa7a-38c9873d8832",
+			"name": "createSettingnachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7476bd6e-1bb2-419b-82fb-8ff44478e551",
+			"name": "createSettingWrongeMail",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f2868d00-240f-44ec-a30b-7ee879472df5",
+			"name": "createSettingeMailNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "36ad7c72-1470-4a05-9012-11b3be7bdd18",
+			"name": "createSettingWrongsettingsId",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "228e20af-5efc-4c24-9a4e-a0a6639c96a0",
+			"name": "createSettingsettingsIdNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 22,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				22
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3dcdcd0e-dd08-4f5c-8343-f2a643ec1585",
+			"name": "createSettingshowAmountNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "986ff49e-5104-485b-aba5-6a1c1003a491",
+			"name": "updateSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/update",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2f484bd7-51b6-463d-968a-f27a58a593d8",
+			"name": "updateSettingnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9fb9a27b-3dcd-487a-afdd-6bff6eabeac1",
+			"name": "updateSettingWrongName",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "148e5155-9f7c-47a9-aab5-621f0d91e9ab",
+			"name": "updateSettingWrongnachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 4,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a1ae9680-6c38-4f01-9205-8abc0e1993da",
+			"name": "updateSettingnachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 11,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e749068c-148c-4621-be24-1e197912ed8e",
+			"name": "updateSettingWrongeMail",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 7,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "84c375c8-c8e5-4e55-9d24-11630e9aeca9",
+			"name": "updateSettingeMailNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "677f97df-8265-46da-9690-c492d247a982",
+			"name": "updateSettingWrongsettingsId",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 6,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "88172dab-b5d7-4db8-bde4-2aab7ee6807f",
+			"name": "updateSettingsettingsIdNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 8,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "96630c61-81d3-40ba-b535-0f34f8577ddb",
+			"name": "updateSettingshowAmountNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 3,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9d34cda5-0480-470d-b7e8-aee8043c6ab9",
+			"name": "deleteSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
+			"time": 6,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3bc6053e-cd0b-4974-8405-4182972eb0be",
+			"name": "deleteSettingWrongSettingsId",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
+			"time": 9,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6a808793-2924-43a0-9970-ac0fce28484a",
+			"name": "deleteSettingsettingsIdNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
+			"time": 6,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a2ecb736-30fc-45c6-b293-217209eeb37d",
+			"name": "createAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 10770,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10770
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a85bbdd2-0630-46fb-8dbe-0a246fc55d88",
+			"name": "createAccountWrongname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 38,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				38
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "04964ba5-e6a3-4290-aaa9-5cdf3e7130c1",
+			"name": "createAccountnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 13,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f733f6fa-b3fa-4410-a601-e92aa387a1c9",
+			"name": "createAccountWrongnachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 14,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8708e3a0-fcf8-4c4f-a948-47f1e158d1a5",
+			"name": "createAccountnachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 27,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				27
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6bbebec6-a553-44d5-a116-2ca599c7d338",
+			"name": "createAccountWrongamount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 13,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "894b29f6-7666-4668-a5de-9c585f27c9a3",
+			"name": "createAccountamountNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a7fb7e4e-c899-46f9-a213-52e8f3fb94a1",
+			"name": "createAccountWrongiBanNr",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "44d98392-0823-4d95-bb1e-99fcaf36ab34",
+			"name": "createAccountiBanNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5d341d8f-2847-4701-b5be-e7cbcc5b6f01",
+			"name": "createAccountWrongkontoNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 32,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				32
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "57899b1b-5e9a-4707-bc7e-249420206db4",
+			"name": "createAccountkontoNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 9,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2e53e6af-88f6-484f-816f-ecd38f72884f",
+			"name": "updateAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/update",
+			"time": 12,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2a7be41e-5aac-4ced-a5f3-c0712dc5aac8",
+			"name": "updateAccountWrongname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 9,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "83a8d249-2328-41e0-b63f-a77e96538587",
+			"name": "updateAccountnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "40460a20-534d-4d7d-91e7-9fa4e41cb7ff",
+			"name": "updateAccountWrongnachname",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 7,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "64c73f48-0767-4a41-b1e7-e0018601da65",
+			"name": "updateAccountnachnameNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 4,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ef42396f-b056-4da2-8fb6-ffefb5af003f",
+			"name": "updateAccountWrongamount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 4,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0f23dfdd-e6eb-48e1-ac77-43250a59f485",
+			"name": "updateAccountamountNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 6,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1a23c147-a807-4a6f-82a1-92b283bbc522",
+			"name": "updateAccountWrongiBanNr",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 9,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "830eed0d-28e2-4d18-99b7-9ccae8132731",
+			"name": "updateAccountWrongkontoNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 5,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dd76a690-e971-4a08-b52e-7f24f392aadc",
+			"name": "updateAccountiBanNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 4,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a8fd033f-81e1-474a-8120-6f928c7a0c40",
+			"name": "updateAccountkontoNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 10,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f6ddf7c2-7b7e-4922-a4aa-08a273b7f9a8",
+			"name": "deleteAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+			"time": 5,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1fcc211c-0b3f-4dc2-a989-29bf6fb7bedd",
+			"name": "deleteAccountWrongkontoNumber",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+			"time": 7,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d237f66f-34b1-43e5-83f0-59216a40666a",
+			"name": "deleteAccountkontoNumberNull",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+			"time": 6,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 11909,
+	"collection": {
+		"requests": [
+			{
+				"id": "be504313-5b7b-4248-86cb-69f396e68b16",
+				"method": "POST"
+			},
+			{
+				"id": "a33c1e8a-a2a8-4928-aa21-8910f0f8eb8b",
+				"method": "POST"
+			},
+			{
+				"id": "4bdba257-3ed4-4367-9caf-f985a19e0431",
+				"method": "POST"
+			},
+			{
+				"id": "10d06ed8-d6e8-460b-9daf-a5d0eae37ff3",
+				"method": "POST"
+			},
+			{
+				"id": "c74557e8-68a1-4c27-ac4b-43036230edee",
+				"method": "POST"
+			},
+			{
+				"id": "6a5935fb-5b08-4a6b-ae54-e48094f8e0a5",
+				"method": "POST"
+			},
+			{
+				"id": "4962a6f1-f31b-49fa-94c1-424d8cc0f83a",
+				"method": "POST"
+			},
+			{
+				"id": "775df7e9-8e70-4631-8226-7547d91a73f2",
+				"method": "POST"
+			},
+			{
+				"id": "7f05ba95-3b42-4f7e-b1fd-8b06701bb6d2",
+				"method": "POST"
+			},
+			{
+				"id": "7b73425c-034c-496c-ae01-5ceee983b18a",
+				"method": "POST"
+			},
+			{
+				"id": "772040a1-aca0-4093-9a05-3ea15071e911",
+				"method": "POST"
+			},
+			{
+				"id": "f2e2c310-e6f9-4514-9dba-0330dbc106bc",
+				"method": "PUT"
+			},
+			{
+				"id": "53ba6a7f-598e-4854-9285-772bdf8a29b3",
+				"method": "PUT"
+			},
+			{
+				"id": "1ca8ef4c-c486-45c1-87e2-eedb96ffe2b1",
+				"method": "PUT"
+			},
+			{
+				"id": "d7c2b441-8acc-48b6-aa2e-7093288904c6",
+				"method": "PUT"
+			},
+			{
+				"id": "6e55419a-d3c5-4234-a3c1-ee84de78d356",
+				"method": "PUT"
+			},
+			{
+				"id": "589468a7-c3f5-444f-83bf-880701d5820a",
+				"method": "PUT"
+			},
+			{
+				"id": "b4264de6-2aeb-46d0-8ea6-75177c75d07f",
+				"method": "PUT"
+			},
+			{
+				"id": "073bc22c-c9fa-48a1-8cd0-21197639fbd5",
+				"method": "PUT"
+			},
+			{
+				"id": "53ae3b63-b9ac-40e5-90cd-97e9579512e3",
+				"method": "PUT"
+			},
+			{
+				"id": "8f86081f-771a-4ff8-a9bc-ebcd20e43c96",
+				"method": "PUT"
+			},
+			{
+				"id": "830bf039-8da4-4cb5-b71b-a87f4779c70c",
+				"method": "PUT"
+			},
+			{
+				"id": "1258087f-5201-465e-bc51-f65e36ecf309",
+				"method": "DELETE"
+			},
+			{
+				"id": "39b34d30-599a-484e-a0ce-eea17b63a026",
+				"method": "DELETE"
+			},
+			{
+				"id": "c7cd3b8a-0ace-471c-863a-4ab8d085d28e",
+				"method": "DELETE"
+			},
+			{
+				"id": "d5bf26cc-1503-4f6f-b869-ed5cf7c10a4e",
+				"method": "POST"
+			},
+			{
+				"id": "94198d7a-fd68-4acc-bed1-77bd4cae82af",
+				"method": "POST"
+			},
+			{
+				"id": "6afccd43-7103-4bfd-b3a0-4d8d7f7ed10d",
+				"method": "POST"
+			},
+			{
+				"id": "8202d08f-c787-4512-98bc-51e024ff6761",
+				"method": "POST"
+			},
+			{
+				"id": "8f0f57eb-c2ec-4f96-aa7a-38c9873d8832",
+				"method": "POST"
+			},
+			{
+				"id": "7476bd6e-1bb2-419b-82fb-8ff44478e551",
+				"method": "POST"
+			},
+			{
+				"id": "f2868d00-240f-44ec-a30b-7ee879472df5",
+				"method": "POST"
+			},
+			{
+				"id": "36ad7c72-1470-4a05-9012-11b3be7bdd18",
+				"method": "POST"
+			},
+			{
+				"id": "228e20af-5efc-4c24-9a4e-a0a6639c96a0",
+				"method": "POST"
+			},
+			{
+				"id": "3dcdcd0e-dd08-4f5c-8343-f2a643ec1585",
+				"method": "POST"
+			},
+			{
+				"id": "986ff49e-5104-485b-aba5-6a1c1003a491",
+				"method": "PUT"
+			},
+			{
+				"id": "2f484bd7-51b6-463d-968a-f27a58a593d8",
+				"method": "PUT"
+			},
+			{
+				"id": "9fb9a27b-3dcd-487a-afdd-6bff6eabeac1",
+				"method": "PUT"
+			},
+			{
+				"id": "148e5155-9f7c-47a9-aab5-621f0d91e9ab",
+				"method": "PUT"
+			},
+			{
+				"id": "a1ae9680-6c38-4f01-9205-8abc0e1993da",
+				"method": "PUT"
+			},
+			{
+				"id": "e749068c-148c-4621-be24-1e197912ed8e",
+				"method": "PUT"
+			},
+			{
+				"id": "84c375c8-c8e5-4e55-9d24-11630e9aeca9",
+				"method": "PUT"
+			},
+			{
+				"id": "677f97df-8265-46da-9690-c492d247a982",
+				"method": "PUT"
+			},
+			{
+				"id": "88172dab-b5d7-4db8-bde4-2aab7ee6807f",
+				"method": "PUT"
+			},
+			{
+				"id": "96630c61-81d3-40ba-b535-0f34f8577ddb",
+				"method": "PUT"
+			},
+			{
+				"id": "9d34cda5-0480-470d-b7e8-aee8043c6ab9",
+				"method": "DELETE"
+			},
+			{
+				"id": "3bc6053e-cd0b-4974-8405-4182972eb0be",
+				"method": "DELETE"
+			},
+			{
+				"id": "6a808793-2924-43a0-9970-ac0fce28484a",
+				"method": "DELETE"
+			},
+			{
+				"id": "a2ecb736-30fc-45c6-b293-217209eeb37d",
+				"method": "POST"
+			},
+			{
+				"id": "a85bbdd2-0630-46fb-8dbe-0a246fc55d88",
+				"method": "POST"
+			},
+			{
+				"id": "04964ba5-e6a3-4290-aaa9-5cdf3e7130c1",
+				"method": "POST"
+			},
+			{
+				"id": "f733f6fa-b3fa-4410-a601-e92aa387a1c9",
+				"method": "POST"
+			},
+			{
+				"id": "8708e3a0-fcf8-4c4f-a948-47f1e158d1a5",
+				"method": "POST"
+			},
+			{
+				"id": "6bbebec6-a553-44d5-a116-2ca599c7d338",
+				"method": "POST"
+			},
+			{
+				"id": "894b29f6-7666-4668-a5de-9c585f27c9a3",
+				"method": "POST"
+			},
+			{
+				"id": "a7fb7e4e-c899-46f9-a213-52e8f3fb94a1",
+				"method": "POST"
+			},
+			{
+				"id": "44d98392-0823-4d95-bb1e-99fcaf36ab34",
+				"method": "POST"
+			},
+			{
+				"id": "5d341d8f-2847-4701-b5be-e7cbcc5b6f01",
+				"method": "POST"
+			},
+			{
+				"id": "57899b1b-5e9a-4707-bc7e-249420206db4",
+				"method": "POST"
+			},
+			{
+				"id": "2e53e6af-88f6-484f-816f-ecd38f72884f",
+				"method": "PUT"
+			},
+			{
+				"id": "2a7be41e-5aac-4ced-a5f3-c0712dc5aac8",
+				"method": "PUT"
+			},
+			{
+				"id": "83a8d249-2328-41e0-b63f-a77e96538587",
+				"method": "PUT"
+			},
+			{
+				"id": "40460a20-534d-4d7d-91e7-9fa4e41cb7ff",
+				"method": "PUT"
+			},
+			{
+				"id": "64c73f48-0767-4a41-b1e7-e0018601da65",
+				"method": "PUT"
+			},
+			{
+				"id": "ef42396f-b056-4da2-8fb6-ffefb5af003f",
+				"method": "PUT"
+			},
+			{
+				"id": "0f23dfdd-e6eb-48e1-ac77-43250a59f485",
+				"method": "PUT"
+			},
+			{
+				"id": "1a23c147-a807-4a6f-82a1-92b283bbc522",
+				"method": "PUT"
+			},
+			{
+				"id": "830eed0d-28e2-4d18-99b7-9ccae8132731",
+				"method": "PUT"
+			},
+			{
+				"id": "dd76a690-e971-4a08-b52e-7f24f392aadc",
+				"method": "PUT"
+			},
+			{
+				"id": "a8fd033f-81e1-474a-8120-6f928c7a0c40",
+				"method": "PUT"
+			},
+			{
+				"id": "f6ddf7c2-7b7e-4922-a4aa-08a273b7f9a8",
+				"method": "DELETE"
+			},
+			{
+				"id": "1fcc211c-0b3f-4dc2-a989-29bf6fb7bedd",
+				"method": "DELETE"
+			},
+			{
+				"id": "d237f66f-34b1-43e5-83f0-59216a40666a",
+				"method": "DELETE"
+			}
+		]
+	}
+}
