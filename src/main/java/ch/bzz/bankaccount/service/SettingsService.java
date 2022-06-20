@@ -124,10 +124,8 @@ public class SettingsService {
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
     public Response delteSetting(
-            @Valid @BeanParam Settings settings,
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("settingsId") String settingsId
+            @QueryParam("settingsId") String settingsId
     ) {
         int httpStatus = 200;
         if (!DataHandler.deleteSetting(settingsId)) {

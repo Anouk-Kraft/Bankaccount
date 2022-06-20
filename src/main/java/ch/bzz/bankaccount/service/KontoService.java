@@ -127,9 +127,8 @@ public class KontoService {
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteAccount(
-            @NotEmpty
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("kontoNumber") String kontoNumber
+            @QueryParam("kontoNumber") String kontoNumber
     ) {
         int httpStatus = 200;
         if (!DataHandler.deleteAccount(kontoNumber)) {

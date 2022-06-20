@@ -83,17 +83,17 @@ public class TransferBillService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateTransfer(
             @Valid @BeanParam TransferBill transferBill,
-            @Pattern(regexp = "[0-9]{1,4}")
+           @Pattern(regexp = "[0-9]{1,4}")
             @FormParam("transferNumber") String transferNumber
     ) {
         int httpStatus = 200;
-        TransferBill oldTransfer = DataHandler.readTransfersBytransferNumber(transferBill.getTransferNumber());
+        TransferBill oldTransfer = DataHandler.readTransfersBytransferNumber(transferNumber);
         if (oldTransfer != null) {
                     oldTransfer.setName(transferBill.getName());
                     oldTransfer.setNachname(transferBill.getNachname());
                     oldTransfer.setiBan(transferBill.getiBan());
                     oldTransfer.setTransferBetrag(transferBill.getTransferBetrag());
-            oldTransfer.setTransferNumber(transferBill.getTransferNumber());
+                    oldTransfer.setTransferNumber(transferBill.getTransferNumber());
 
             DataHandler.updateTransfer();
         } else {

@@ -2,6 +2,8 @@ package ch.bzz.bankaccount.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.ws.rs.FormParam;
@@ -16,21 +18,26 @@ public class Settings {
 
     @FormParam("name")
     @Size(min=3, max=30)
+    @NotNull
     private String name;
 
     @FormParam("nachname")
     @Size(min=3, max=30)
+    @NotNull
     private String nachname;
 
-    @FormParam("iBan")
+    @FormParam("eMail")
     @Pattern(regexp = "[A-Za-z1-9.]{1,40}@[A-Za-z.]{1,20}")
+    @NotNull
     private String eMail;
 
     @FormParam("settingsId")
     @Size(min=1, max=4)
+    @NotNull
     private String settingsId;
 
     @FormParam("showAmount")
+    @NotNull
     private boolean showAmount;
 
     /**

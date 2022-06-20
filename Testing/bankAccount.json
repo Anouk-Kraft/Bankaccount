@@ -1,9 +1,8 @@
-[
-{
-  "name": "Alfred",
-  "nachname": "Alger",
-  "amount": 50.00,
-  "iBanNr": "CH93007600003342356567",
-  "kontoNumber": 422
-} 
-]
+[ {
+  "kontoNumber" : "44",
+  "name" : "Wallahfsef",
+  "nachname" : "Kriesegseg",
+  "amount" : 50.0,
+  "iBanNr" : "DE930878900093342356567",
+  "transferNumber" : null
+} ]

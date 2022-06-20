@@ -2,10 +2,7 @@ package ch.bzz.bankaccount.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import javax.ws.rs.FormParam;
 import java.math.BigDecimal;
 
@@ -19,23 +16,28 @@ public class TransferBill {
 
     @FormParam("name")
     @Size(min=3, max=30)
+    @NotNull
     private String name;
 
     @FormParam("nachname")
     @Size(min=3, max=30)
+    @NotNull
     private String nachname;
 
     @FormParam("iBan")
     @Pattern(regexp = "[a-zA-Z]{2}[0-9]{18,22}")
+    @NotNull
     private String iBan;
 
     @FormParam("transferBetrag")
     @DecimalMin(value ="0.05")
     @DecimalMax(value = "1000000.00")
+    @NotNull
     private BigDecimal transferBetrag;
 
     @FormParam("transferNumber")
     @Size(min=1, max=10000)
+    @NotNull
     private String transferNumber;
 
 

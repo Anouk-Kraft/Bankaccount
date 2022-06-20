@@ -4,10 +4,7 @@ package ch.bzz.bankaccount.model;
 import ch.bzz.bankaccount.data.DataHandler;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import javax.ws.rs.FormParam;
 
 /*
@@ -17,23 +14,28 @@ public class Konto {
 
     @FormParam("kontoNumber")
     @Size(min=1, max=10000)
+    @NotNull
     private String kontoNumber;
 
     @FormParam("name")
     @Size(min=3, max=30)
+    @NotNull
     private String name;
 
     @FormParam("nachname")
     @Size(min=3, max=30)
+    @NotNull
     private String nachname;
 
     @FormParam("amount")
     @DecimalMin(value ="0.05")
     @DecimalMax(value = "1000000.00")
+    @NotNull
     private double amount;
 
     @FormParam("iBanNr")
     @Pattern(regexp = "[a-zA-Z]{2}[0-9]{18,22}")
+    @NotNull
     private String iBanNr;
 
 

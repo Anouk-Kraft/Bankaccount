@@ -53,6 +53,578 @@
 			"response": []
 		},
 		{
+			"name": "createTransferWrongName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lu",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransfernameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lu",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransferWrongNachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kr",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransfernachnameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kr",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransferWrongiBan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "H9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransferiBanNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "H9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransferWrongAmount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "-0.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransfertransferBetragNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "-0.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransferWrongTransferNumber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "77777",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTransfertransferNumberNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "77777",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferWrongName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lu",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "updateTransfer",
 			"request": {
 				"method": "PUT",
@@ -105,21 +677,534 @@
 			"response": []
 		},
 		{
-			"name": "deleteTransfer",
+			"name": "upadteTransfernameNull",
 			"request": {
-				"method": "DELETE",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
 							"key": "transferNumber",
-							"value": "72",
-							"type": "text",
-							"disabled": true
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lu",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
 						}
 					]
 				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferWrongNachname",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kr",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransfernachnameNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kr",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferWrongiBan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "H9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferiBanNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "H9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferWrongAmount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "-0.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransfertransferBetragNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "555",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "-0.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransferWrongTransferNumber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "77777",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upadteTransfertransferNumberNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "transferNumber",
+							"value": "77777",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "lulo",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "kraft",
+							"type": "text"
+						},
+						{
+							"key": "iBan",
+							"value": "CH9098786545638291067",
+							"type": "text"
+						},
+						{
+							"key": "transferBetrag",
+							"value": "50.5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTransfer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "transferNumber",
+							"value": "420"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTransferWrongtransferNumber",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"transfers",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "transferNumber",
+							"value": "420"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTransfertransferNumberNull",
+			"request": {
+				"method": "DELETE",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=420",
 					"protocol": "http",
@@ -150,7 +1235,501 @@
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": []
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingWrongName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingnameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingWrongnachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingnachnameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingWrongeMail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingeMailNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingWrongsettingsId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingsettingsIdNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSettingshowAmountNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
@@ -222,21 +1801,534 @@
 			"response": []
 		},
 		{
-			"name": "deleteSetting",
+			"name": "updateSettingnameNull",
 			"request": {
-				"method": "DELETE",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
 							"key": "settingsId",
-							"value": "",
-							"type": "text",
-							"disabled": true
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
 						}
 					]
 				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingWrongName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingWrongnachname",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingnachnameNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingWrongeMail",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingeMailNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingWrongsettingsId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingsettingsIdNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSettingshowAmountNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ACHACHACH",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Paranoi",
+							"type": "text"
+						},
+						{
+							"key": "eMail",
+							"value": "hallo.mallo",
+							"type": "text"
+						},
+						{
+							"key": "settingsId",
+							"value": "225",
+							"type": "text"
+						},
+						{
+							"key": "showAmount",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSetting",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "settingsId",
+							"value": "223"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSettingWrongSettingsId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"settings",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "settingsId",
+							"value": "223"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSettingsettingsIdNull",
+			"request": {
+				"method": "DELETE",
+				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=223",
 					"protocol": "http",
@@ -270,27 +2362,767 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Wallah",
+							"value": "Wallahfsef",
 							"type": "text"
 						},
 						{
 							"key": "nachname",
-							"value": "Kriese",
+							"value": "Kriesegseg",
 							"type": "text"
 						},
 						{
 							"key": "amount",
-							"value": "450.00",
+							"value": "50.00",
 							"type": "text"
 						},
 						{
 							"key": "iBanNr",
-							"value": "CH930878900093342356567",
+							"value": "DE930878900093342356567",
 							"type": "text"
 						},
 						{
 							"key": "kontoNumber",
-							"value": "432",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountWrongname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfseffaswfawfaflkhalwhfoawlhfoawhfaiouuwhfaowihfaowhfoaiwfhaowihf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountnameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfseffaswfawfaflkhalwhfoawlhfoawhfaiouuwhfaowihfaowhfoaiwfhaowihf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountWrongnachname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegsegafwaöozhfaouiwzfhaowhfoawuihfaoiwhfjipahnfisoahfopawhfoiuawf",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountnachnameNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegsegafwaöozhfaouiwzfhaowhfoawuihfaoiwhfjipahnfisoahfopawhfoiuawf",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountWrongamount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "-50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountamountNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "-50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountWrongiBanNr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountiBanNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountWrongkontoNumber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccountkontoNumberNull",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44A",
 							"type": "text"
 						}
 					]
@@ -387,16 +3219,828 @@
 			"response": []
 		},
 		{
+			"name": "updateAccountWrongname",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfseffaswfawfaflkhalwhfoawlhfoawhfaiouuwhfaowihfaowhfoaiwfhaowihf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountWrongnachname",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegsegafwaöozhfaouiwzfhaowhfoawuihfaoiwhfjipahnfisoahfopawhfoiuawf",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountnameNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfseffaswfawfaflkhalwhfoawlhfoawhfaiouuwhfaowihfaowhfoaiwfhaowihf",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountWrongamount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "-50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountnachnameNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegsegafwaöozhfaouiwzfhaowhfoawuihfaoiwhfjipahnfisoahfopawhfoiuawf",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountamountNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "-50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountWrongiBanNr",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountWrongkontoNumber",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountiBanNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAccountkontoNumberNull",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Wallahfsef",
+							"type": "text"
+						},
+						{
+							"key": "nachname",
+							"value": "Kriesegseg",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						},
+						{
+							"key": "iBanNr",
+							"value": "DE930878900093342356567",
+							"type": "text"
+						},
+						{
+							"key": "kontoNumber",
+							"value": "44A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hallo",
+							"disabled": true
+						},
+						{
+							"key": "nachname",
+							"value": "BRRRZT",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "430.00",
+							"disabled": true
+						},
+						{
+							"key": "iBanNr",
+							"value": "CH93007900003342356567",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "deleteAccount",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "kontoNumber",
+							"value": "432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAccountWrongkontoNumber",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "kontoNumber",
+							"value": "432"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAccountkontoNumberNull",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=432",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"BankAccount-1.0",
+						"resource",
+						"konto",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "kontoNumber",
+							"value": "432"
+						}
+					]
 				}
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
