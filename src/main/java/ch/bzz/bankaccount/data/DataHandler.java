@@ -5,6 +5,7 @@ import ch.bzz.bankaccount.model.Settings;
 import ch.bzz.bankaccount.model.TransferBill;
 
 
+import ch.bzz.bankaccount.model.User;
 import ch.bzz.bankaccount.service.Config;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,6 +26,7 @@ public class DataHandler {
     private static List<Konto> kontoList;
     private static List<TransferBill> transferBillList;
     private static List<Settings> settingsList;
+    private static List<User> userList;
 
     /**
      * private constructor defeats instantiation
@@ -237,6 +239,18 @@ public class DataHandler {
             return false;
         }
     }
+
+    public String readUserRole(String username, String password) {
+        for (User user : getUserList()) {
+            if (user.getUsername().equals(username) &&
+                    user.getPassword().equals(password)) {
+                return user.getUsername();
+            }
+        }
+        return "guest";
+    }
+
+
     /**
      * reads the Transfers from the JSON-file
      */
@@ -357,6 +371,44 @@ public class DataHandler {
         }
     }
 
+    /**
+     * reads the users from the JSON-file
+     */
+    private static void readUserJSON() {
+        try {
+            byte[] jsonData = Files.readAllBytes(
+                    Paths.get(
+                            Config.getProperty("userJSON")
+                    )
+            );
+            ObjectMapper objectMapper = new ObjectMapper();
+            User[] users = objectMapper.readValue(jsonData, User[].class);
+            for (User user : users) {
+                getUserList().add(user);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+    /**
+     * reads a user by the username/password provided
+     *
+     * @param username
+     * @param password
+     * @return user-object
+     */
+    public static User readUser(String username, String password) {
+        User user = new User();
+        for (User entry : getUserList()) {
+            if (entry.getUsername().equals(username) &&
+                    entry.getPassword().equals(password)) {
+                user = entry;
+            }
+        }
+        return user;
+    }
 
 
 
@@ -491,4 +543,29 @@ public class DataHandler {
     private static void setKontolist(List<Konto> kontoList) {
         DataHandler.kontoList = kontoList;
     }
+
+    /**
+     * gets userList
+     *
+     * @return value of userList
+     */
+
+    public static List<User> getUserList() {
+        if (DataHandler.userList == null) {
+            DataHandler.setUserList(new ArrayList<>());
+            readUserJSON();
+        }
+        return userList;
+    }
+
+    /**
+     * sets userList
+     *
+     * @param userList the value to set
+     */
+
+    public static void setUserList(List<User> userList) {
+        DataHandler.userList = userList;
+    }
+
 }

@@ -31,6 +31,7 @@ public class Config extends Application {
         providers.add(KontoService.class);
         providers.add(TransferBillService.class);
         providers.add(SettingsService.class);
+        providers.add(UserService.class);
         return providers;
     }
 
@@ -72,6 +73,12 @@ public class Config extends Application {
      * @param properties the value to set
      */
     private static void setProperties(Properties properties) {
+
         Config.properties = properties;
     }
+
+
+
+
 }
+

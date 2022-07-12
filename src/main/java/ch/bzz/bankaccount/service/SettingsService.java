@@ -29,10 +29,21 @@ public class SettingsService {
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
 
-    public Response settingsList() {
-        List<Settings> settingsList = DataHandler.getInstance().readAllSettings();
+    public Response settingsList(@CookieParam("userRole") String userRole) {
+
+        List<Settings> settingsList = null;
+
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            settingsList = DataHandler.getInstance().readAllSettings();
+        }
+
+
         return Response
-                .status(200)
+                .status(httpStatus)
                 .entity(settingsList)
                 .build();
     }
@@ -47,9 +58,18 @@ public class SettingsService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readSettings(
             @Pattern(regexp = "[0-9]{1,5}")
-            @QueryParam("id") String settingsId) {
-        int httpStatus = 200;
-        Settings settings = DataHandler.readSettingsBySettingId(settingsId);
+            @QueryParam("id") String settingsId,
+            @CookieParam("userRole") String userRole) {
+
+        Settings settings = null;
+        int httpStatus;
+
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            settings = DataHandler.readSettingsBySettingId(settingsId);
+        }
         if (settings == null) {
             httpStatus = 410;
         }
@@ -70,14 +90,20 @@ public class SettingsService {
     public Response insertSetting(
             @Valid @BeanParam Settings settings,
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("settingsId") String settingsId
+            @FormParam("settingsId") String settingsId,
+            @CookieParam("userRole") String userRole
     ) {
 
-        settings.setSettingsId(settingsId);
-
-        DataHandler.insertSettings(settings);
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            settings.setSettingsId(settingsId);
+            DataHandler.insertSettings(settings);
+        }
         return Response
-                .status(200)
+                .status(httpStatus)
                 .entity("")
                 .build();
     }
@@ -93,11 +119,16 @@ public class SettingsService {
     public Response updateSetting(
             @Valid @BeanParam Settings settings,
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("settingsId") String settingsId
+            @FormParam("settingsId") String settingsId,
+            @CookieParam("userRole") String userRole
 
     ) {
-        int httpStatus = 200;
+        int httpStatus;
         Settings oldSetting = DataHandler.readSettingsBySettingId(settingsId);
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
         if (oldSetting != null) {
             oldSetting.setName(settings.getName());
             oldSetting.setNachname(settings.getNachname());
@@ -108,6 +139,7 @@ public class SettingsService {
             DataHandler.upadteSettings();
         } else {
             httpStatus = 410;
+        }
         }
         return Response
                 .status(httpStatus)
@@ -125,11 +157,18 @@ public class SettingsService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response delteSetting(
             @Pattern(regexp = "[0-9]{1,4}")
-            @QueryParam("settingsId") String settingsId
+            @QueryParam("settingsId") String settingsId,
+            @CookieParam("userRole") String userRole
     ) {
-        int httpStatus = 200;
+        int httpStatus;
+
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
         if (!DataHandler.deleteSetting(settingsId)) {
             httpStatus = 410;
+        }
         }
         return Response
                 .status(httpStatus)

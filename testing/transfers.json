@@ -23,6 +23,12 @@
   "transferBetrag" : 50.00,
   "transferNumber" : "23"
 }, {
+  "name" : "Mike",
+  "nachname" : "Höner",
+  "iBan" : "CH89607620116900087654",
+  "transferBetrag" : 650.00,
+  "transferNumber" : "420"
+}, {
   "name" : "fabio",
   "nachname" : "anouk",
   "iBan" : "CH99997600003342356567",
@@ -45,7 +51,13 @@
   "nachname" : "kraft",
   "iBan" : "CH9098786545638291067",
   "transferBetrag" : 50.5,
-  "transferNumber" : "785"
+  "transferNumber" : "7850"
+}, {
+  "name" : "lulol",
+  "nachname" : "kraft",
+  "iBan" : "CH9098786545638291067",
+  "transferBetrag" : 50.5,
+  "transferNumber" : "7850"
 }, {
   "name" : "lulol",
   "nachname" : "kraft",

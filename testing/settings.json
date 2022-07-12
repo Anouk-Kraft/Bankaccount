@@ -1,30 +1,12 @@
 [ {
-  "name" : "COOL",
-  "nachname" : "YOYOYOY",
-  "eMail" : null,
+  "name" : "Anouk",
+  "nachname" : "Kraft",
+  "eMail" : "anouk.kraft@gmx.ch",
   "settingsId" : "6554",
-  "showAmount" : true
-}, {
-  "name" : "ACHACHACH",
-  "nachname" : "Paranoi",
-  "eMail" : null,
-  "settingsId" : "225",
   "showAmount" : false
 }, {
   "name" : "ACHACHACH",
-  "nachname" : "Paranoi",
-  "eMail" : "hallo.mallo@gmx.ch",
-  "settingsId" : "225",
-  "showAmount" : false
-}, {
-  "name" : "ACHACHACH",
-  "nachname" : "Paranoi",
-  "eMail" : "hallo.mallo@gmx.ch",
-  "settingsId" : "225",
-  "showAmount" : false
-}, {
-  "name" : "ACHACHACH",
-  "nachname" : "Paranoi",
+  "nachname" : "fesf",
   "eMail" : "hallo.mallo@gmx.ch",
   "settingsId" : "225",
   "showAmount" : false
@@ -32,6 +14,6 @@
   "name" : "ACHACHACH",
   "nachname" : "fesf",
   "eMail" : "hallo.mallo@gmx.ch",
-  "settingsId" : "225",
+  "settingsId" : "432",
   "showAmount" : false
 } ]

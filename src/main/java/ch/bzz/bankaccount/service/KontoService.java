@@ -2,10 +2,8 @@ package ch.bzz.bankaccount.service;
 
 import ch.bzz.bankaccount.data.DataHandler;
 import ch.bzz.bankaccount.model.Konto;
-import ch.bzz.bankaccount.model.Settings;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -24,22 +22,34 @@ public class KontoService {
 
     /**
      * reads a list of all kontos
-     * @return  kontos as JSON
+     *
+     * @return kontos as JSON
      */
-        @GET
-        @Path("list")
-        @Produces(MediaType.APPLICATION_JSON)
-        public Response kontoList() {
-            List<Konto> kontoList = DataHandler.getInstance().readAllKontos();
-            return Response
-                    .status(200)
-                    .entity(kontoList)
-                    .build();
+    @GET
+    @Path("list")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response kontoList(
+            @CookieParam("userRole") String userRole
+    ) {
+        List<Konto> kontoList = null;
+
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            kontoList = DataHandler.getInstance().readAllKontos();
         }
+        return Response
+                .status(httpStatus)
+                .entity(kontoList)
+                .build();
+    }
 
 
     /**
      * reads a konto identified by the number
+     *
      * @param kontoNumber the key
      * @return konto
      */
@@ -48,10 +58,19 @@ public class KontoService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response readKonto(
             @Pattern(regexp = "[0-9]{1,4}")
-            @QueryParam("kontoNumber") String kontoNumber) {
-        int httpStatus = 200;
-        Konto konto = DataHandler.readKontoByKontoNumber(kontoNumber);
-        if (konto == null) {
+            @QueryParam("kontoNumber") String kontoNumber,
+            @CookieParam("userRole") String userRole)
+
+    {
+        Konto konto = null;
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            konto = DataHandler.readKontoByKontoNumber(kontoNumber);
+        }
+        if (userRole==null){
             httpStatus = 410;
         }
         return Response
@@ -62,6 +81,7 @@ public class KontoService {
 
     /**
      * inserts a new konto
+     *
      * @param kontoNumber the number of the konto
      * @return Response
      */
@@ -71,20 +91,28 @@ public class KontoService {
     public Response insertKonto(
             @Valid @BeanParam Konto konto,
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("kontoNumber") String kontoNumber
+            @FormParam("kontoNumber") String kontoNumber,
+            @CookieParam("userRole") String userRole
+
     ) {
+        int httpStatus;
 
-        konto.setKontoNumber(kontoNumber);
-
-        DataHandler.insertAccount(konto);
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            konto.setKontoNumber(kontoNumber);
+            DataHandler.insertAccount(konto);
+        }
         return Response
-                .status(200)
+                .status(httpStatus)
                 .entity("")
                 .build();
     }
 
     /**
      * updates a new konto
+     *
      * @param kontoNumber the number of the konto
      * @return Response
      */
@@ -94,23 +122,27 @@ public class KontoService {
     public Response updateKonto(
             @Valid @BeanParam Konto konto,
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("kontoNumber") String kontoNumber
-
-
+            @FormParam("kontoNumber") String kontoNumber,
+            @CookieParam("userRole") String userRole
     ) {
-        int httpStatus = 200;
+        int httpStatus;
         Konto oldKonto = DataHandler.readKontoByKontoNumber(kontoNumber);
-        if (oldKonto != null) {
-            oldKonto.setKontoNumber(konto.getKontoNumber());
-            oldKonto.setName(konto.getName());
-            oldKonto.setNachname(konto.getNachname());
-            oldKonto.setAmount(konto.getAmount());
-            oldKonto.setiBanNr(konto.getiBanNr());
 
-
-            DataHandler.updateAccount();
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
         } else {
-            httpStatus = 410;
+            httpStatus = 200;
+            if (oldKonto != null) {
+                oldKonto.setKontoNumber(konto.getKontoNumber());
+                oldKonto.setName(konto.getName());
+                oldKonto.setNachname(konto.getNachname());
+                oldKonto.setAmount(konto.getAmount());
+                oldKonto.setiBanNr(konto.getiBanNr());
+
+                DataHandler.updateAccount();
+            } else {
+                httpStatus = 410;
+            }
         }
         return Response
                 .status(httpStatus)
@@ -120,19 +152,27 @@ public class KontoService {
 
     /**
      * deletes a konto by its number
-     * @param kontoNumber  the key
-     * @return  Response
+     *
+     * @param kontoNumber the key
+     * @return Response
      */
     @DELETE
     @Path("delete")
     @Produces(MediaType.TEXT_PLAIN)
     public Response deleteAccount(
             @Pattern(regexp = "[0-9]{1,4}")
-            @QueryParam("kontoNumber") String kontoNumber
+            @QueryParam("kontoNumber") String kontoNumber,
+            @CookieParam("userRole") String userRole
     ) {
-        int httpStatus = 200;
+
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
         if (!DataHandler.deleteAccount(kontoNumber)) {
             httpStatus = 410;
+        }
         }
         return Response
                 .status(httpStatus)

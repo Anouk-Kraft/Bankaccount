@@ -26,10 +26,23 @@ public class TransferBillService {
     @Path("list")
     @Produces(MediaType.APPLICATION_JSON)
 
-    public Response listTransferBills() {
-        List<TransferBill> transferBillList = DataHandler.getInstance().readAllTransfers();
+    public Response listTransferBills(@CookieParam("userRole") String userRole) {
+
+
+
+        List<TransferBill> transferBillList = null;
+
+
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            transferBillList = DataHandler.getInstance().readAllTransfers();
+        }
+
         return Response
-                .status(200)
+                .status(httpStatus)
                 .entity(transferBillList)
                 .build();
     }
@@ -40,9 +53,20 @@ public class TransferBillService {
     public Response readTransfers(
             @NotEmpty
             @Pattern(regexp = "[0-9]{1,5}")
-            @QueryParam("transferNumber") String transferNumber) {
-        int httpStatus = 200;
-        TransferBill transferBill = DataHandler.readTransfersBytransferNumber(transferNumber);
+            @QueryParam("transferNumber") String transferNumber,
+            @CookieParam("userRole") String userRole) {
+
+
+        int httpStatus;
+        TransferBill transferBill = null;
+
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            transferBill = DataHandler.readTransfersBytransferNumber(transferNumber);
+        }
+
         if (transferBill == null) {
             httpStatus = 410;
         }
@@ -62,13 +86,23 @@ public class TransferBillService {
     public Response insertTransfer(
             @Valid @BeanParam TransferBill transferBill,
             @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("transferNumber") String transferNumber
+            @FormParam("transferNumber") String transferNumber,
+            @CookieParam("userRole") String userRole
     ) {
-        transferBill.setTransferNumber(transferNumber);
 
-        DataHandler.insertTransfer(transferBill);
+        int httpStatus;
+
+
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
+            transferBill.setTransferNumber(transferNumber);
+            DataHandler.insertTransfer(transferBill);
+        }
+
         return Response
-                .status(200)
+                .status(httpStatus)
                 .entity("")
                 .build();
     }
@@ -83,11 +117,16 @@ public class TransferBillService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateTransfer(
             @Valid @BeanParam TransferBill transferBill,
-           @Pattern(regexp = "[0-9]{1,4}")
-            @FormParam("transferNumber") String transferNumber
+            @Pattern(regexp = "[0-9]{1,4}")
+            @FormParam("transferNumber") String transferNumber,
+            @CookieParam("userRole") String userRole
     ) {
-        int httpStatus = 200;
+        int httpStatus;
         TransferBill oldTransfer = DataHandler.readTransfersBytransferNumber(transferNumber);
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
         if (oldTransfer != null) {
                     oldTransfer.setName(transferBill.getName());
                     oldTransfer.setNachname(transferBill.getNachname());
@@ -98,7 +137,7 @@ public class TransferBillService {
             DataHandler.updateTransfer();
         } else {
             httpStatus = 410;
-        }
+        }}
         return Response
                 .status(httpStatus)
                 .entity("")
@@ -115,11 +154,17 @@ public class TransferBillService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response delteTransfer(
             @Pattern(regexp = "[0-9]{1,4}")
-            @QueryParam("transferNumber") String transferNumber
+            @QueryParam("transferNumber") String transferNumber,
+            @CookieParam("userRole") String userRole
     ) {
-        int httpStatus = 200;
+        int httpStatus;
+        if (userRole == null || userRole.equals("guest")) {
+            httpStatus = 403;
+        } else {
+            httpStatus = 200;
         if (!DataHandler.deleteTransfer(transferNumber)) {
             httpStatus = 410;
+        }
         }
         return Response
                 .status(httpStatus)

@@ -1,0 +1,599 @@
+{
+	"id": "7b69f08b-6fcf-48ad-9eb8-1753c0d2b0f8",
+	"name": "milestone3",
+	"timestamp": "2022-07-12T09:33:18.026Z",
+	"collection_id": "9b9fb55c-972d-431b-90b1-a0d9a33a2007",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 26,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7573728f-52b6-41f6-9e61-d52a2d42d030",
+			"name": "login User",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/user/login",
+			"time": 58,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "6901134e-bcc8-4a68-b11f-575ca51d45c4",
+			"name": "List Transfers",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/list",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "b7426e32-d79d-4349-af07-41d3dd220483",
+			"name": "List Bankaccounts",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/list",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "0178254e-b256-4b59-9736-63f8d9d47fb0",
+			"name": "List Settings",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/list",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "3a78b834-448f-484f-b4f8-db0204d99083",
+			"name": "Read Bankaccounts",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/read?id=435",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "355c0b08-ebd0-4b09-bbae-66c176f01c49",
+			"name": "createTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/create",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "d17fb98a-d36f-4f66-aef7-6dd4ec2a7e6d",
+			"name": "createSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/create",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "af6a66ac-5ffa-48c2-b239-aaaba974a5bc",
+			"name": "createAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/create",
+			"time": 28,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "9fbb7113-8431-4bcb-91b0-566fd7d21ea1",
+			"name": "updateTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/update",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "29ea6f60-b9ab-45f4-a3e7-3e392e8bc9d1",
+			"name": "updateSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/update",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "8fa0b260-9b11-47ae-9d4f-0921690d76a4",
+			"name": "updateAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/update",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "771ce985-dce1-47cf-b8f2-1b86e501bf81",
+			"name": "deleteTransfer",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/transfers/delete?transferNumber=7850",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "3a57f7d3-dfbb-4a8b-bb40-f6269edbdb0c",
+			"name": "deleteSetting",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/settings/delete?settingsId=432",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "ad1aee60-f9f8-42e1-a8e8-fbf17116bdc0",
+			"name": "deleteAccount",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/konto/delete?kontoNumber=78",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true,
+				"Content-Type header is text/plain": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is text/plain": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true,
+					"Content-Type header is text/plain": true
+				}
+			]
+		},
+		{
+			"id": "07357480-8ca5-4e2f-8078-9cd3a5feeadc",
+			"name": "logout User",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/user/logout",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "b283e0e6-5837-4eb6-996b-64fd97002f2a",
+			"name": "wrong Username",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/user/login",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		},
+		{
+			"id": "2aa4d341-4039-4a09-9ff4-fd26a3540716",
+			"name": "wrong password",
+			"url": "http://localhost:8080/BankAccount-1.0/resource/user/login",
+			"time": 8,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status test": true
+			},
+			"testPassFailCounts": {
+				"Status test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status test": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 232,
+	"collection": {
+		"requests": [
+			{
+				"id": "7573728f-52b6-41f6-9e61-d52a2d42d030",
+				"method": "POST"
+			},
+			{
+				"id": "6901134e-bcc8-4a68-b11f-575ca51d45c4",
+				"method": "GET"
+			},
+			{
+				"id": "b7426e32-d79d-4349-af07-41d3dd220483",
+				"method": "GET"
+			},
+			{
+				"id": "0178254e-b256-4b59-9736-63f8d9d47fb0",
+				"method": "GET"
+			},
+			{
+				"id": "3a78b834-448f-484f-b4f8-db0204d99083",
+				"method": "GET"
+			},
+			{
+				"id": "355c0b08-ebd0-4b09-bbae-66c176f01c49",
+				"method": "POST"
+			},
+			{
+				"id": "d17fb98a-d36f-4f66-aef7-6dd4ec2a7e6d",
+				"method": "POST"
+			},
+			{
+				"id": "af6a66ac-5ffa-48c2-b239-aaaba974a5bc",
+				"method": "POST"
+			},
+			{
+				"id": "9fbb7113-8431-4bcb-91b0-566fd7d21ea1",
+				"method": "PUT"
+			},
+			{
+				"id": "29ea6f60-b9ab-45f4-a3e7-3e392e8bc9d1",
+				"method": "PUT"
+			},
+			{
+				"id": "8fa0b260-9b11-47ae-9d4f-0921690d76a4",
+				"method": "PUT"
+			},
+			{
+				"id": "771ce985-dce1-47cf-b8f2-1b86e501bf81",
+				"method": "DELETE"
+			},
+			{
+				"id": "3a57f7d3-dfbb-4a8b-bb40-f6269edbdb0c",
+				"method": "DELETE"
+			},
+			{
+				"id": "ad1aee60-f9f8-42e1-a8e8-fbf17116bdc0",
+				"method": "DELETE"
+			},
+			{
+				"id": "07357480-8ca5-4e2f-8078-9cd3a5feeadc",
+				"method": "DELETE"
+			},
+			{
+				"id": "b283e0e6-5837-4eb6-996b-64fd97002f2a",
+				"method": "POST"
+			},
+			{
+				"id": "2aa4d341-4039-4a09-9ff4-fd26a3540716",
+				"method": "POST"
+			}
+		]
+	}
+}
